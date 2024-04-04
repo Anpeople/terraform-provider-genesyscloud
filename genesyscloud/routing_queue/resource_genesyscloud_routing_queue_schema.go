@@ -333,26 +333,6 @@ func ResourceRoutingQueue() *schema.Resource {
 				Type:        schema.TypeString,
 				Optional:    true,
 			},
-			"outbound_email_address": {
-				Description: "The outbound email address settings for this queue.",
-				Type:        schema.TypeList,
-				MaxItems:    1,
-				Optional:    true,
-				Elem: &schema.Resource{
-					Schema: map[string]*schema.Schema{
-						"domain_id": {
-							Description: "Unique ID of the email domain. e.g. \"test.example.com\"",
-							Type:        schema.TypeString,
-							Required:    true,
-						},
-						"route_id": {
-							Description: "Unique ID of the email route.",
-							Type:        schema.TypeString,
-							Required:    true,
-						},
-					},
-				},
-			},
 			"members": {
 				Description: "Users in the queue. If not set, this resource will not manage members. If a user is already assigned to this queue via a group, attempting to assign them using this field will cause an error to be thrown.",
 				Type:        schema.TypeSet,
@@ -408,8 +388,6 @@ func RoutingQueueExporter() *resourceExporter.ResourceExporter {
 			"whisper_prompt_id":                 {RefType: "genesyscloud_architect_user_prompt"},
 			"outbound_messaging_sms_address_id": {},                               // Ref type not yet defined
 			"default_script_ids.*":              {RefType: "genesyscloud_script"}, // Ref type not yet defined
-			"outbound_email_address.route_id":   {RefType: "genesyscloud_routing_email_route"},
-			"outbound_email_address.domain_id":  {RefType: "genesyscloud_routing_email_domain"},
 			"bullseye_rings.skills_to_remove":   {RefType: "genesyscloud_routing_skill"},
 			"members.user_id":                   {RefType: "genesyscloud_user"},
 			"wrapup_codes":                      {RefType: "genesyscloud_routing_wrapupcode"},
@@ -418,8 +396,7 @@ func RoutingQueueExporter() *resourceExporter.ResourceExporter {
 			"groups":                            {RefType: "genesyscloud_group"},
 		},
 		RemoveIfMissing: map[string][]string{
-			"outbound_email_address": {"route_id"},
-			"members":                {"user_id"},
+			"members": {"user_id"},
 		},
 		AllowZeroValues: []string{"bullseye_rings.expansion_timeout_seconds"},
 		CustomAttributeResolver: map[string]*resourceExporter.RefAttrCustomResolver{

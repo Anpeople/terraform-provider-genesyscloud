@@ -6,6 +6,7 @@ import (
 	"terraform-provider-genesyscloud/genesyscloud/architect_datatable_row"
 	emergencyGroup "terraform-provider-genesyscloud/genesyscloud/architect_emergencygroup"
 	flow "terraform-provider-genesyscloud/genesyscloud/architect_flow"
+	routingQueueCondtionalGroupRouting "terraform-provider-genesyscloud/genesyscloud/routing_queue_conditional_group_routing"
 
 	grammar "terraform-provider-genesyscloud/genesyscloud/architect_grammar"
 	grammarLanguage "terraform-provider-genesyscloud/genesyscloud/architect_grammar_language"
@@ -44,6 +45,7 @@ import (
 	respManagementRespAsset "terraform-provider-genesyscloud/genesyscloud/responsemanagement_responseasset"
 	routingEmailRoute "terraform-provider-genesyscloud/genesyscloud/routing_email_route"
 	routingQueue "terraform-provider-genesyscloud/genesyscloud/routing_queue"
+	routingQueueOutboundEmailAddress "terraform-provider-genesyscloud/genesyscloud/routing_queue_outbound_email_address"
 	routingSmsAddress "terraform-provider-genesyscloud/genesyscloud/routing_sms_addresses"
 	workbin "terraform-provider-genesyscloud/genesyscloud/task_management_workbin"
 	workitemSchema "terraform-provider-genesyscloud/genesyscloud/task_management_workitem_schema"
@@ -134,6 +136,8 @@ func (r *registerTestInstance) registerTestResources() {
 	providerResources["genesyscloud_routing_email_route"] = routingEmailRoute.ResourceRoutingEmailRoute()
 	providerResources["genesyscloud_routing_language"] = gcloud.ResourceRoutingLanguage()
 	providerResources["genesyscloud_routing_queue"] = routingQueue.ResourceRoutingQueue()
+	providerResources["genesyscloud_routing_queue_conditional_group_routing"] = routingQueueCondtionalGroupRouting.ResourceRoutingQueueConditionalGroupRouting()
+	providerResources["genesyscloud_routing_queue_outbound_email_address"] = routingQueueOutboundEmailAddress.ResourceRoutingQueueOutboundEmailAddress()
 	providerResources["genesyscloud_routing_skill"] = gcloud.ResourceRoutingSkill()
 	providerResources["genesyscloud_routing_settings"] = gcloud.ResourceRoutingSettings()
 	providerResources["genesyscloud_routing_utilization"] = gcloud.ResourceRoutingUtilization()
@@ -238,6 +242,8 @@ func (r *registerTestInstance) registerTestExporters() {
 	RegisterExporter("genesyscloud_routing_email_route", routingEmailRoute.RoutingEmailRouteExporter())
 	RegisterExporter("genesyscloud_routing_language", gcloud.RoutingLanguageExporter())
 	RegisterExporter("genesyscloud_routing_queue", routingQueue.RoutingQueueExporter())
+	RegisterExporter("genesyscloud_routing_queue_conditional_group_routing", routingQueueCondtionalGroupRouting.RoutingQueueConditionalGroupRoutingExporter())
+	RegisterExporter("genesyscloud_routing_queue_outbound_email_address", routingQueueOutboundEmailAddress.OutboundRoutingQueueOutboundEmailAddressExporter())
 	RegisterExporter("genesyscloud_routing_settings", gcloud.RoutingSettingsExporter())
 	RegisterExporter("genesyscloud_routing_skill", gcloud.RoutingSkillExporter())
 	RegisterExporter("genesyscloud_routing_skill_group", gcloud.ResourceSkillGroupExporter())

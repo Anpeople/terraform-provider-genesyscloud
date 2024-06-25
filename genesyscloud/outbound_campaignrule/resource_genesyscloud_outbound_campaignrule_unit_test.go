@@ -10,7 +10,11 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"github.com/stretchr/testify/assert"
 )
 

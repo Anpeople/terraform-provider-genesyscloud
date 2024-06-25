@@ -1,9 +1,15 @@
 package outbound_filespecificationtemplate
 
 import (
+<<<<<<< HEAD
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"terraform-provider-genesyscloud/genesyscloud/util/resourcedata"
+
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
 )
 
 func getFilespecificationtemplateFromResourceData(d *schema.ResourceData) platformclientv2.Filespecificationtemplate {

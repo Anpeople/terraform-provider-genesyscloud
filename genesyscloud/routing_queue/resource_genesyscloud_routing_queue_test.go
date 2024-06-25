@@ -20,12 +20,16 @@ import (
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
 )
 
 var (
 	sdkConfig *platformclientv2.Configuration
 	mu        sync.Mutex
+=======
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+>>>>>>> COBROWSE-2427-pause-field-v3
 )
 
 func TestAccResourceRoutingQueueBasic(t *testing.T) {

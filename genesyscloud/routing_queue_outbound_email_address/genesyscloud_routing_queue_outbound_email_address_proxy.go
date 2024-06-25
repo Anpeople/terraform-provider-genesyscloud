@@ -3,9 +3,14 @@ package routing_queue_outbound_email_address
 import (
 	"context"
 	"fmt"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	rc "terraform-provider-genesyscloud/genesyscloud/resource_cache"
 	routingQueue "terraform-provider-genesyscloud/genesyscloud/routing_queue"
+
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
 )
 
 // internalProxy holds a proxy instance that can be used throughout the package

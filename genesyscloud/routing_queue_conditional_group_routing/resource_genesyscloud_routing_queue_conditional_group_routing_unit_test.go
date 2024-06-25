@@ -2,14 +2,23 @@ package routing_queue_conditional_group_routing
 
 import (
 	"context"
+<<<<<<< HEAD
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
 	"github.com/stretchr/testify/assert"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"net/http"
 	"terraform-provider-genesyscloud/genesyscloud/provider"
 	"testing"
+
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/uuid"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestUnitResourceRoutingQueueConditionalGroupRoutingUpdate(t *testing.T) {

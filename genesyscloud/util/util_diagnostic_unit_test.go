@@ -2,12 +2,18 @@ package util
 
 import (
 	"encoding/json"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
 	"github.com/stretchr/testify/assert"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"net/http"
 	"net/url"
 	"strings"
 	"testing"
+
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestUnitTestAPIResponseDiagWithGoodApiResponse(t *testing.T) {

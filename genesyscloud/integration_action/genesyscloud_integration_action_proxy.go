@@ -4,8 +4,13 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"net/http"
+
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
 )
 
 /*

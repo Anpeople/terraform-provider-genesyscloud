@@ -9,7 +9,11 @@ import (
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+<<<<<<< HEAD:genesyscloud/routing_utilization_label/resource_genesyscloud_routing_utilization_label_test.go
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+>>>>>>> COBROWSE-2427-pause-field-v3:genesyscloud/resource_genesyscloud_routing_utilization_label_test.go
 )
 
 func TestAccResourceRoutingUtilizationLabelBasic(t *testing.T) {

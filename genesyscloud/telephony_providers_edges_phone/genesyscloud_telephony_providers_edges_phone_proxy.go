@@ -6,9 +6,13 @@ import (
 	"log"
 	"net/http"
 
+<<<<<<< HEAD
 	rc "terraform-provider-genesyscloud/genesyscloud/resource_cache"
 
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+>>>>>>> COBROWSE-2427-pause-field-v3
 )
 
 /*

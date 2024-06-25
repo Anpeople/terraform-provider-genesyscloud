@@ -2,10 +2,13 @@ package routing_queue_outbound_email_address
 
 import (
 	"fmt"
+<<<<<<< HEAD
 	"github.com/google/uuid"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"log"
 	"os"
 	"strings"
@@ -17,6 +20,11 @@ import (
 	featureToggles "terraform-provider-genesyscloud/genesyscloud/util/feature_toggles"
 	"testing"
 	"time"
+
+	"github.com/google/uuid"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
+	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
 )
 
 func TestAccResourceRoutingQueueOutboundEmailAddress(t *testing.T) {

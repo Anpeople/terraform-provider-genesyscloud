@@ -24,7 +24,11 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/validation"
+<<<<<<< HEAD
 	"github.com/mypurecloud/platform-client-sdk-go/v131/platformclientv2"
+=======
+	"github.com/mypurecloud/platform-client-sdk-go/v133/platformclientv2"
+>>>>>>> COBROWSE-2427-pause-field-v3
 	"github.com/nyaruka/phonenumbers"
 )
 
